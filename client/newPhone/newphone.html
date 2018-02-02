@@ -1,0 +1,88 @@
+<template name="newphone">
+    <div class="row">
+        <h3>Новый волонтер</h3>
+    </div>
+    <form class="edit-phone">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" class="form-control" id="name" placeholder="Имя">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="form-control" id="phone" placeholder="79123456789">
+                </div>
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" class="form-control" id="age" placeholder="33">
+                </div>
+                <div class="form-group">
+                    <label for="category">Категория</label>
+                    <input type="text" class="form-control" id="category" placeholder="Волонтер">
+                </div>
+                <div class="form-group">
+                    <label for="place">Местоположение</label>
+                    <input type="text" class="form-control" id="place" placeholder="Пермь">
+                </div>
+                <div class="form-group">
+                    <label for="isVerified">Верифицирован</label>
+                    <select class="form-control" id="isVerified">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Почта</label>
+                    <input type="email" class="form-control" id="email" placeholder="mail@mail.com">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                    <label for="isReadyForOutdoorAgitation">Готов к уличной агитации?</label>
+                    <select class="form-control">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Примечание</label>
+                    <input type="text" class="form-control" id="comments" placeholder="Что-нибудь интересное">
+                </div>
+                <div class="form-group">
+                    <label for="isReadyForSupervision">Готов стать наблюдателем?</label>
+                    <select class="form-control" id="isReadyForSupervision">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Район</label>
+                    <input type="text" class="form-control" id="district" placeholder="Что-нибудь интересное">
+                </div>
+                <div class="form-group">
+                    <label for="doesHaveBike">Есть велосипед?</label>
+                    <select class="form-control" id="doesHaveBike">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="doesHaveAuto">Есть автомобиль?</label>
+                    <select class="form-control" id="doesHaveAuto">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="isReadyForHomeAgitation">Готов агитировать в своем районе?</label>
+                    <select class="form-control" id="isReadyForHomeAgitation">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</template>

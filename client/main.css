@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Call Me Maybe";
+    src: url("/fonts/KGCallMeMaybe-skinny.ttf")
+}
+.text-logo{
+    font-family:'Call Me Maybe';
+}
+.trianglified-background{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.login-form-wrapper{
+    background-image: url("/img/bg.png");
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255,255,255,.4);
+}
+.login-form h3{
+    text-align: center;
+}
+
+.upload-excel-file{
+    position: absolute;
+    margin-top: -100px;
+}
+
+.loader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+abbr{
+    text-decoration: dashed;
+}
+
+.phantom-input{
+    border:none
+}
+
+.event-card{
+    margin: 20px;
+}

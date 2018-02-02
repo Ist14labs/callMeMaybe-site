@@ -1,0 +1,29 @@
+<template name="appLayout">
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Call me maybe</a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link">{{currentUser.username}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/list">Список</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/events">Обзвоны</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/users">Пользователи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link logout text-danger" href="/panic">ТОВАРИЩ МАЙОР</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link logout" href="#">Выход</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="container" style="margin-top:80px">
+        {{>yield}}
+    </div>
+</template>

@@ -1,0 +1,50 @@
+<template name="users">
+    <div class="row">
+        <h3>Пользователи</h3>
+    </div>
+    <br><br>
+    <div class="row">
+        <h4>Новый пользователь</h4>
+    </div>
+    <div class="row">
+        <form class="new-user form-inline">
+            <div class="form-group mb-2">
+                <input type="text" id="newLogin" class="form-control" placeholder="Логин">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="newPassword" placeholder="Пароль">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Сохранить</button>
+        </form>
+    </div>
+    <br><br>
+    <div class="row">
+        <h4>Все пользователи:</h4>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Логин</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each user}}
+                <tr>
+                    <td>{{username}}</td>
+                    <td>
+                        {{#if showRemoveButton}}
+                            <a href="#" class="remove-user text-danger" data-userid="{{_id}}">Удалить</a><br>
+                        {{/if}}
+                        <a href="#" class="reset-password" data-userid="{{_id}}">Сбросить пароль</a><br>
+                    </td>
+                </tr>
+
+            {{/each}}
+
+            </tbody>
+        </table>
+
+    </div>
+</template>

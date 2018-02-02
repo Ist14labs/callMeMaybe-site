@@ -1,0 +1,124 @@
+<template name="list">
+    <div class="hidden">
+        <input type="file" class="upload-excel-file">
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-5">
+            <button class="btn btn-primary upload-excel">Загрузить excel</button>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-5">
+            <button class="btn btn-primary download-excel">Выгрузить excel</button>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-5">
+            <a href="/newphone" class="btn btn-primary">Добавить волонтера</a>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Имя
+                        </th>
+                        <th>
+                            <abbr title="Телефон">Тел</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Возраст">Взр</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Категория">Кат</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Местонахождение">Мст.</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Прошел ли верификацию?">Вер.</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Почта">Пчт</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Готов к уличной агитации">УА</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Примечания">Прм</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Готов ли стать наблюдателем">Нбл</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Район">Р-н</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Есть ли велосипед?">Вел</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Есть ли автомобиль">Авт</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Готов агитировать в своем районе">АВР</abbr>
+                        </th>
+                        <th>
+                            <abbr title="Звонки">Звн</abbr>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each phones}}
+                    <tr class="gotoPhone" data-phoneid="{{_id}}">
+                        <td >
+                            {{name}}
+                        </td>
+                        <td >
+                            {{phone}}
+                        </td>
+                        <td>
+                            {{age}}
+                        </td>
+                        <td>
+                            {{category}}
+                        </td>
+                        <td>
+                            {{place}}
+                        </td>
+                        <td>
+                            {{truefalser param=isVerified}}
+                        </td>
+                        <td>
+                            {{email}}
+                        </td>
+                        <td>
+                            {{truefalser param=isReadyForOutdoorAgitation}}
+                        </td>
+                        <td>
+                            {{comments}}
+                        </td>
+                        <td>
+                            {{truefalser param=isReadyForSupervision}}
+                        </td>
+                        <td>
+                            {{district}}
+                        </td>
+                        <td>
+                            {{truefalser param=doesHaveBike}}
+                        </td>
+                        <td>
+                            {{truefalser param=doesHaveAuto}}
+                        </td>
+                        <td>
+                            {{truefalser param=isReadyForHomeAgitation}}
+                        </td>
+                        <td>
+                                {{#each call}}
+                                {{/each}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

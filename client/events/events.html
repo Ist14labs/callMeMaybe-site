@@ -1,0 +1,23 @@
+<template name="events">
+    <div class="row">
+        <h3>Обзвоны / <a href="/newevent">Создать</a></h3>
+    </div>
+    <br><br>
+    <div class="row">
+        {{#each event}}
+        <div class="card event-card col-lg-3 col-md-4" >
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Создан {{createdBy}}@{{getDate createdAt}}</h6>
+                <p class="card-text">
+                    Фильтры:<br>{{{getFilters}}}<br>
+                    Прогресс:<abbr title="Совершено звонков">{{getCalled}}</abbr>/<abbr title="Совершается сейчас или отложено звонков">{{getHeld}}</abbr>/<abbr title="Всего номеров в обзвоне">{{getProgress}}</abbr>
+                </p>
+                <a href="#" class="card-link">Сбросить отложенные звонки</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</template>
